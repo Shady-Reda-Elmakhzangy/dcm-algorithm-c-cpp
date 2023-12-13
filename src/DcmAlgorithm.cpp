@@ -209,7 +209,7 @@ float DcmAlgorithm::getYaw() {
   return TO_DEG(_yaw) + 180.0f;
 }
 
-extern "C" struct DcmAlgorithm* dcmInititialize(void)
+extern "C" struct DcmAlgorithm* dcmInitialize(void)
 {
   return new DcmAlgorithm;
 }

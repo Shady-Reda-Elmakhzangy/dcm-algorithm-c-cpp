@@ -3,7 +3,7 @@
 
 struct DcmAlgorithm;
 
-struct DcmAlgorithm* dcmInititialize(void);
+struct DcmAlgorithm* dcmInitialize(void);
 void dcmUninitialize(struct DcmAlgorithm* dcm);
 void dcmUpdate(struct DcmAlgorithm* dcm, float dt, float gx, float gy, float gz, float ax, float ay, float az, float mx, float my, float mz);
 float dcmGetRoll(struct DcmAlgorithm* dcm);
