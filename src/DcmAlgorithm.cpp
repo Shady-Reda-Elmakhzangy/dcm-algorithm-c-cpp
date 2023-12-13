@@ -208,3 +208,34 @@ float DcmAlgorithm::getPitch() {
 float DcmAlgorithm::getYaw() {
   return TO_DEG(_yaw) + 180.0f;
 }
+
+extern "C" struct DcmAlgorithm* dcmInititialize(void)
+{
+  return new DcmAlgorithm;
+}
+
+extern "C" void dcmUninitialize(struct DcmAlgorithm* dcm)
+{
+  delete dcm;
+}
+
+extern "C" void dcmUpdate(DcmAlgorithm* dcm, float dt, float gx, float gy, float gz, float ax, float ay, float az, float mx, float my, float mz)
+{
+  return dcm->update(dt, gx, gy, gz, ax, ay, az, mx, my, mz);
+}
+
+extern "C" float dcmGetRoll(DcmAlgorithm* dcm)
+{
+  return dcm->getRoll();
+}
+
+extern "C" float dcmGetPitch(DcmAlgorithm* dcm)
+{
+  return dcm->getPitch();
+}
+
+extern "C" float dcmGetYaw(DcmAlgorithm* dcm)
+{
+  return dcm->getYaw();
+}
+

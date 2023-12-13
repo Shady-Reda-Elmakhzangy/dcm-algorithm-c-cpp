@@ -6,7 +6,7 @@
 class DcmAlgorithm{
 public:
   DcmAlgorithm(void);
-  void update(float, float gx, float gy, float gz, float ax, float ay, float az, float mx, float my, float mz);
+  void update(float dt, float gx, float gy, float gz, float ax, float ay, float az, float mx, float my, float mz);
   float getRoll();
   float getPitch();
   float getYaw();
