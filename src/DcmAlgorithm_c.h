@@ -2,6 +2,7 @@
 #define DcmAlgorithm_c_h
 
 struct DcmAlgorithm;
+typedef struct DcmAlgorithm DcmAlgorithm;
 
 struct DcmAlgorithm* dcmInitialize(void);
 void dcmUninitialize(struct DcmAlgorithm* dcm);
